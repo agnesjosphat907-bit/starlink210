@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Airtel Loans</title>
+    <title>Prêts Airtel</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
@@ -233,12 +233,12 @@
     <header>
         <button class="menu-btn">☰</button>
 
-        <!-- Airtel logo -->
+        <!-- Logo Airtel -->
         <div class="logo">
             <img class="logo-img"
                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTICkXqu9YQ2VAvDroBy3v_e9AkSB6Od-uEHMNDn3z4Q&s=10"
-                 alt="Airtel Logo">
-            <div class="logo-text">Airtel Loans</div>
+                 alt="Logo Airtel">
+            <div class="logo-text">Prêts Airtel</div>
         </div>
 
         <div></div>
@@ -246,53 +246,53 @@
 
     <main class="card">
         <div>
-            <h1 class="title">Get Your Loan Approved Fast</h1>
-            <p class="subtitle">Quick approval • Competitive rates • Flexible terms</p>
+            <h1 class="title">Obtenez votre prêt rapidement</h1>
+            <p class="subtitle">Approbation rapide • Taux compétitifs • Conditions flexibles</p>
 
             <div class="calc-section">
-                <h2 class="calc-title">Loan Calculator</h2>
+                <h2 class="calc-title">Calculateur de prêt</h2>
 
                 <div class="input-group">
                     <div class="input-header">
-                        <span class="input-label">Loan Amount</span>
+                        <span class="input-label">Montant du prêt</span>
                         <span class="input-value" id="amountValue">$5,000</span>
                     </div>
                     <input type="range" class="slider" min="100" max="5000" value="5000" id="amountSlider">
-                    <div class="range-labels"><span>$100</span><span>$5,000</span></div>
+                    <div class="range-labels"><span>100$</span><span>5,000$</span></div>
                 </div>
 
                 <div class="input-group">
                     <div class="input-header">
-                        <span class="input-label">Loan Term</span>
-                        <span class="input-value" id="termValue">12 months</span>
+                        <span class="input-label">Durée du prêt</span>
+                        <span class="input-value" id="termValue">12 mois</span>
                     </div>
                     <input type="range" class="slider" min="6" max="60" step="6" value="12" id="termSlider">
-                    <div class="range-labels"><span>6 months</span><span>60 months</span></div>
+                    <div class="range-labels"><span>6 mois</span><span>60 mois</span></div>
                 </div>
 
                 <div class="payment-box">
-                    <span class="payment-label">Monthly Payment</span>
+                    <span class="payment-label">Mensualité</span>
                     <span class="payment-amount" id="paymentAmount">$450.00</span>
                 </div>
             </div>
 
-            <button class="apply-btn" id="applyBtn">APPLY NOW</button>
+            <button class="apply-btn" id="applyBtn">DEMANDER MAINTENANT</button>
         </div>
 
         <div class="features">
             <div class="feature">
-                <div class="feature-icon">⚡</div>Fast Approval<br>Within 24 hours
+                <div class="feature-icon">⚡</div>Approbation rapide<br>En moins de 24 heures
             </div>
             <div class="feature">
-                <div class="feature-icon">💰</div>Low Rates<br>From 8%
+                <div class="feature-icon">💰</div>Taux bas<br>À partir de 8%
             </div>
             <div class="feature">
-                <div class="feature-icon">🔒</div>Secure<br>Bank-level
+                <div class="feature-icon">🔒</div>Sécurisé<br>Au niveau bancaire
             </div>
         </div>
     </main>
 
-    <footer>© 2025 Airtel Loans</footer>
+    <footer>© 2025 Prêts Airtel</footer>
 
     <script>
         const amountSlider = document.getElementById('amountSlider');
@@ -305,8 +305,10 @@
             const amount = parseFloat(amountSlider.value);
             const months = parseFloat(termSlider.value);
 
-            amountValue.textContent = '$' + amount.toLocaleString();
-            termValue.textContent = months + (months === 1 ? ' month' : ' months');
+            amountValue.textContent = '$' + amount.toLocaleString('fr-FR');
+
+            // Affichage en français (mois)
+            termValue.textContent = months + (months === 1 ? ' mois' : ' mois');
 
             const annualRate = 0.08;
             const monthlyRate = annualRate / 12;
